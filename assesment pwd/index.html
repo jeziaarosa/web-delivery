@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbhak Mart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet " href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" style="background-color: #A8A196;">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Starbhak Mart</span>
+      <div class="position-relative">
+      <input type="text" name="" id="search">
+          <img src="images/magnifying-glass.png" style="width: 25px; height: 25px; right: 5px; top: 3px;" class="position-absolute">
+    </div>
+  </nav>
+
+  <!-- Main container -->
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <h2>market place</h2>
+      <!-- Start top and middle -->
+      <div class="">
+        <!-- Start top -->
+        <div class="d-grid w-100 flex-column gap-3 mb-3">
+          <select name="" id="" style="background-color: #A8A196;" class="py-2 rounded-2">
+            <option value="Take Away" class="text-center py-2">Take Away</option>
+            <option value="Delivery" class="text-center py-2">Delivery</option>
+          </select>
+          <div class="text-center px-2 w-100 rounded-2" style="background-color: #A8A196;">
+            <p>Mang Jay</p>
+          </div>
+        </div>
+
+        <div id="cart-items-container">
+          <ul id="cart-items"></ul>
+        </div>
+        <!-- End top -->
+
+        <!-- Start middle -->
+        <div class="w-100" id="footer" style="background-color: #A8A196; padding: 10px; margin-top: 265px;">
+          <p>Total: <span id="total">Rp. 0</span></p>
+          <button onclick="placeOrder()" style="background-color: #7D7463; color: white; padding: 10px; border: none; border-radius: 3px;">Pesan</button>
+      </div>
+
+        <!-- End middle -->
+      </div>
+      <!-- End top and midle -->
+
+      <!-- Start bottom -->
+      <div class="">
+
+      </div>
+      <!-- End bottom -->
+
+
+
+    </div>
+    <!-- End sidebar -->
+
+   
+    <!-- Start menu -->
+    <div class="w-100 bg-light p-5" style="display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px; ">
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/corndg.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">paket corndog</h5>
+          <p class="card-text">Rp. 25.000</p>
+          <button class="btn" style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/kmbp.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">kimbap</h5>
+          <p class="card-text">Rp. 20.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/sndwch.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">sandwich</h5>
+          <p class="card-text">Rp. 25.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/mochi.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">mochi bites</h5>
+          <p class="card-text">Rp. 20.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/nasi paket.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">paket nasi ayam</h5>
+          <p class="card-text">Rp. 25.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/dmsm.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">dumpling</h5>
+          <p class="card-text">Rp. 15.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/safel.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">shaffel pancake</h5>
+          <p class="card-text">Rp. 23.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/diseret.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">dessert</h5>
+          <p class="card-text">Rp. 25.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/brownies.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">cookies</h5>
+          <p class="card-text">Rp. 8.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+      <div class="card" style="width: 10rem; background-color: #A8A196;">
+        <img src="images/asinan.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title" id="menu">asinan buah</h5>
+          <p class="card-text">Rp. 20.000</p>
+          <button class="btn"style="background-color: #7D7463;" onclick="addToSidebar(this)">Add</button>
+        </div>
+      </div>
+    </div>
+    <!-- End menu -->
+  </div>
+  <!-- end content  -->
+
+  </div>
+  <!-- End container all -->
+
+  <!-- Start Footer -->
+  
+  <!-- End Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"></script>
+  <script src="ass.js"></script>
+
+</body>
+
+</html>
